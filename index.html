@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 ">
+    <meta http-equiv="X-UA-compatible" content = "ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Formulario</title>
+</head>
+<body> 
+    
+    <section class="form-register">
+        <h4>Formulario Registro</h4>
+        <input class="controls" type ="text" name="Nombre completo" id="nombres" placeholder="Ingrese su nombre">
+        <input class ="controls" type ="email" name="Correo electronico " id="Correo" placeholder="Ingrese su correo">
+        
+        
+        <div class="personaldetails_identityOption_container">
+            
+            <div class="form-row  required input-radio" data-required-text="null" aria-required="true">
+            <div class="field-wrapper">
+            <input class="input-radio " required="" type="radio" checked="checked" id="dwfrm_personaldetails_identityOption_RUT" name="dwfrm_personaldetails_identityOption" value="RUT" aria-required="true" aria-invalid="false"><label class="radio-label" onclick="checkerTerm" for="dwfrm_personaldetails_identityOption_RUT">RUT</label><input class="input-radio " required="" type="radio" id="dwfrm_personaldetails_identityOption_DNI" name="dwfrm_personaldetails_identityOption" value="DNI" aria-required="true" aria-invalid="false"><label class="radio-label" onclick="checkerTerm" for="dwfrm_personaldetails_identityOption_DNI">DNI</label>
+            <span id="dwfrm_personaldetails_identityOption-error" class="server-error "></span>
+            </div>
+            </div>
+            
+            <div class="form-row input-input required" data-required-text="Debes ingresar tu RUT">
+            <label for="dwfrm_personaldetails_rut_d0syhsnbwncb"></label>
+            <div class="field-wrapper">
+            <input class="input-text form-control js-dynamicname-rut rut" type="text" id="dwfrm_personaldetails_rut_d0syhsnbwncb" name="dwfrm_personaldetails_rut_d0syhsnbwncb" value="" data-dynamicname="true" data-dynamicname-identifier=".js-dynamicname-rut" maxlength="12" placeholder="Ejemplo: 12.345.678-9       " data-valid-rut="false" aria-required="true" aria-invalid="true" aria-describedby="dwfrm_personaldetails_rut_d0syhsnbwncb-error" required="required">
+            
+            </div>
+            </div>
+            </div>
+            <div id="js-identityOption-dni-container" class="identityOption-dni-container" style="display: none;">
+            <div class="form-row input-input" data-required-text="Ingresa tu DNI">
+            <label for="dwfrm_personaldetails_dni_d0bzkrthwvbb"><span>DNI</span></label>
+            <div class="field-wrapper">
+            <input class="input-text form-control dni" type="text" id="dwfrm_personaldetails_dni_d0bzkrthwvbb" name="dwfrm_personaldetails_dni_d0bzkrthwvbb" value="" maxlength="15" placeholder="Documento nacional de identidad      " aria-required="true" aria-invalid="true" aria-describedby="dwfrm_personaldetails_dni_d0bzkrthwvbb-error">
+            
+            </div>
+            </div>
+            </div>
+            </div>
+           
+    <button type="submit" id="btn" class="btn btn-primary">Ingresar</button>
+    
+    
+    
+
+       </section>
+       <script>
+        (function() {
+          'use strict';
+          window.addEventListener('load', function() {
+            var forms = document.getElementsByClassName('needs-validation');
+            var validation = Array.prototype.filter.call(forms, function(form) {
+              form.addEventListener('submit', function(event) {
+                if (form.checkValidity() === false) {
+                  event.preventDefault();
+                  event.stopPropagation();
+                }
+                form.classList.add('was-validated');
+              }, false);
+            });
+          }, false);
+        })();
+        </script>
+          
+    </body>
+
+
+
+
+
+
+</html>
